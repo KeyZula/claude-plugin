@@ -1,0 +1,10 @@
+{
+  "name": "keyzula-claude-plugin",
+  "version": "1.2.3",
+  "private": true,
+  "description": "Pins the KeyZula CLI that the plugin's MCP server runs.",
+  "license": "MIT",
+  "dependencies": {
+    "@keyzula/cli": "1.2.3"
+  }
+}
