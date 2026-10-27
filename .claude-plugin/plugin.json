@@ -1,0 +1,51 @@
+{
+  "name": "keyzula",
+  "displayName": "KeyZula",
+  "version": "1.2.3",
+  "description": "Use passwords and API keys from your KeyZula vault without Claude seeing them.",
+  "author": {
+    "name": "KeyZula",
+    "email": "info@keyzula.com",
+    "url": "https://keyzula.com"
+  },
+  "homepage": "https://keyzula.com/en/ai/",
+  "license": "MIT",
+  "keywords": ["password-manager", "secrets", "api-keys", "2fa", "ssh", "security"],
+  "icon": "./icon.png",
+  "documentationUrl": "https://keyzula.com/en/cli/#mcp",
+  "supportUrl": "https://keyzula.com/en/support/",
+  "privacyPolicyUrl": "https://keyzula.com/en/privacy/",
+  "termsOfServiceUrl": "https://keyzula.com/en/terms/",
+  "mcpServers": {
+    "keyzula": {
+      "command": "npx",
+      "args": ["-y", "@keyzula/cli@1.2.3", "mcp"],
+      "env": {
+        "KEYZULA_MCP_ALLOW_REVEAL": "${user_config.allow_reveal}",
+        "KEYZULA_MCP_CONFIRM": "${user_config.confirm}",
+        "KEYZULA_SERVICE_TOKEN": "${user_config.service_token}"
+      }
+    }
+  },
+  "userConfig": {
+    "allow_reveal": {
+      "type": "boolean",
+      "title": "Allow showing values",
+      "description": "Offer read_secret (passwords, 2FA codes). Every request still needs your approval in a KeyZula window on your computer.",
+      "default": false
+    },
+    "confirm": {
+      "type": "boolean",
+      "title": "Ask before every use",
+      "description": "Also ask for approval before each command or file that uses a secret.",
+      "default": false
+    },
+    "service_token": {
+      "type": "string",
+      "title": "Service account token (optional)",
+      "description": "For teams: a kzsa_1_ token limits Claude to the service account's collections. Leave empty to use your own unlocked agent.",
+      "sensitive": true,
+      "default": ""
+    }
+  }
+}

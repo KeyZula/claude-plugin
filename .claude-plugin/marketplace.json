@@ -1,0 +1,17 @@
+{
+  "name": "keyzula",
+  "owner": {
+    "name": "KeyZula",
+    "email": "info@keyzula.com"
+  },
+  "metadata": {
+    "description": "KeyZula password manager for Claude: use secrets without exposing them."
+  },
+  "plugins": [
+    {
+      "name": "keyzula",
+      "source": "./",
+      "description": "Use passwords and API keys from your KeyZula vault without Claude seeing them."
+    }
+  ]
+}
