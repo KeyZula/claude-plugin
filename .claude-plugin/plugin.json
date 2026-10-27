@@ -9,8 +9,16 @@
     "url": "https://keyzula.com"
   },
   "homepage": "https://keyzula.com/en/ai/",
+  "repository": "https://github.com/KeyZula/claude-plugin",
   "license": "MIT",
-  "keywords": ["password-manager", "secrets", "api-keys", "2fa", "ssh", "security"],
+  "keywords": [
+    "password-manager",
+    "secrets",
+    "api-keys",
+    "2fa",
+    "ssh",
+    "security"
+  ],
   "icon": "./icon.png",
   "documentationUrl": "https://keyzula.com/en/cli/#mcp",
   "supportUrl": "https://keyzula.com/en/support/",
@@ -19,7 +27,11 @@
   "mcpServers": {
     "keyzula": {
       "command": "npx",
-      "args": ["-y", "@keyzula/cli@1.2.3", "mcp"],
+      "args": [
+        "-y",
+        "@keyzula/cli@1.2.3",
+        "mcp"
+      ],
       "env": {
         "KEYZULA_MCP_ALLOW_REVEAL": "${user_config.allow_reveal}",
         "KEYZULA_MCP_CONFIRM": "${user_config.confirm}",
