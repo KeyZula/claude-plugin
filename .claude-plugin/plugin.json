@@ -1,7 +1,7 @@
 {
   "name": "keyzula",
   "displayName": "KeyZula",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Use passwords and API keys from your KeyZula vault without Claude seeing them.",
   "author": {
     "name": "KeyZula",
@@ -29,7 +29,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@keyzula/cli@1.2.3",
+        "@keyzula/cli@1.2.4",
         "mcp"
       ],
       "env": {
